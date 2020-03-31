@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<div class="alert alert-warning" role="alert">
+  Please, use only people photos (don't event try Shrek)!<br>
+  Use only 1-person-photo, otherwise only person at very left will be added!
+
+</div>
+    <h1>Add Photo</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form, button_map={'submit':'success'}) }}
+        </div>
+    </div>
+{% endblock %}
