@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+"""Main Blueprint."""
 from flask import Blueprint
 
 bp = Blueprint('main', __name__)

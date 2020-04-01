@@ -1,0 +1,18 @@
+<div class="mt-2 mb-5 btn-group">
+  <button id="flip" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Allowed Formats
+  </button>
+  <div id="panel" class="mt-1 dropdown-menu bg-warning">
+    <a class="dropdown-item" href="#">PNG</a>
+    <a class="dropdown-item" href="#">JPG</a>
+    <a class="dropdown-item" href="#">JPEG</a>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
