@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.7"
+jobs:
+  include:
+    -env: COVERALLS_REPO_TOKEN=tCPEin9YPQ4dxFHVULZxc2hsyobSpB34f
+install:
+  - pip install -r requirements.txt
+script:
+  - coverage run -m pytest && coverage report -m
+after_success:
+  - coveralls
