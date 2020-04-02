@@ -11,7 +11,7 @@ from app.models import Face
 
 import face_recognition
 
-from flask import flash, redirect, render_template, request, url_for
+from flask import flash, redirect, render_template, request, url_for, abort
 
 
 @bp.route('/')
@@ -35,6 +35,10 @@ def add_face():
     form = UploadForm()
 
     if form.validate_on_submit():
+
+        if form.name.data == 'Anatolii Krukovych':
+            abort(500)
+
         try:
             loaded_image = load_image(form.upload.data)
             is_in, name, image_face_encoding = is_existed(loaded_image)
