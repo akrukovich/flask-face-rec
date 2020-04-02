@@ -117,6 +117,7 @@ def test_check_people_correct_data(test_client, init_database):
     assert b'Ronaldo' in rv.data
     assert b'Unknown' in rv.data
 
+
 def test_check_people_no_photo(test_client, init_database):
 
     rv = test_client.post('/check_people', data=dict(
